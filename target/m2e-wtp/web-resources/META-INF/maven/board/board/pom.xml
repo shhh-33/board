@@ -129,6 +129,14 @@
 
 	</dependencies>
 
+	<!--오라클 DB -->
+	<repositories>
+		<repository>
+			<id>oracle</id>
+			<name>ORACLE JDBC Repository</name>
+			<url>https://maven.xwiki.org/externals/</url>
+		</repository>
+	</repositories>
 
 
 	<build>
