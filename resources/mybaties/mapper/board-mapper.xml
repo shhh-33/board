@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 
+- mapper의 namespace는 Mapper 인터페이스와 동일한 이름
+- select 태그의 id는 메소드의 이름과 일치
+- resultType은 select 쿼리의 결과를 특정 클래스의 객체 또는 다른 자료형 타입과 일치해야한다.
+ -->
+
+<mapper namespace="ojc.repository.BoardMapper">
+	
+	<resultMap type="Board" id="boardResultMap">
+		<result property="id" column="ID" />
+		<result property="writer" column="WRITER" />
+		<result property="title" column="TITLE" />
+		<result property="content" column="CONTENT" />
+		<result property="regDate" column="REG_DATE" />
+		<result property="hitCount" column="HIT_COUNT" />
+	</resultMap>
+	
+	<insert id="insert" parameterType="Board">
+		INSERT INTO xboard(writer, title, content, reg_date, hit_count)
+		VALUES(#{writer}, #{title}, #{content}, SYSDATE, 0)
+	</insert>
+	
+</mapper>
