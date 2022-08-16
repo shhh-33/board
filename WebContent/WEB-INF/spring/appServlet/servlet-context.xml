@@ -30,11 +30,11 @@
 	<!-- 로그인 여부를 확인하기 위한 인터셉터
 	     게시판쪽으로 들어오는 요청은 로그인이 되지 않았다면 
 	     로그인 화면으로 보낸다. -->
-	<interceptors>
+	<!-- <interceptors>
 		<interceptor>
 		    <mapping path="/boards/**" />
 			<beans:bean class="ojc.web.interceptor.LoginInterceptor" />
 		</interceptor>
 	</interceptors>
-
+ -->
 </beans:beans>

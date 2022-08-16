@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<settings>
+		<setting name="cacheEnabled" value="true"/>
+		<setting name="mapUnderscoreToCamelCase" value="true" />
+		<setting name="defaultFetchSize" value="100" />
+		<setting name="defaultStatementTimeout" value="30" />
+	</settings>
+
+	<typeAliases>
+	    <!-- 보통 VO객체여러개이고 한 패키지내에 존재할 때 package 사용. 
+	         아래 패키지 아래의 클래스들이 mapper xml에서 type으로 사용됨-->
+		<package name="ojc.board.model" />
+		<package name="ojc.user.model" />
+	</typeAliases>
+</configuration>
